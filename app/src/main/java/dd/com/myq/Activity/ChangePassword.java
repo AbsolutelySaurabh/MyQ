@@ -22,7 +22,6 @@ import java.util.HashMap;
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.util.TextUtils;
 import dd.com.myq.App.Config;
-import dd.com.myq.Fragment.AccountFragment;
 import dd.com.myq.R;
 import dd.com.myq.Util.SessionManager;
 
@@ -30,7 +29,6 @@ import static dd.com.myq.Util.SessionManager.KEY_UID;
 
 public class ChangePassword extends AppCompatActivity {
     EditText newpass,confirm;
-
     private ProgressDialog progress;
     private Button change;
 
@@ -44,7 +42,6 @@ public class ChangePassword extends AppCompatActivity {
         progress.setMessage("Updating Profile...");
         progress.setIndeterminate(false);
         progress.setCancelable(false);
-
 
     }
     public void change(View view) {
@@ -95,11 +92,9 @@ public class ChangePassword extends AppCompatActivity {
                 Log.e("Response Login: ", response.toString());
                 Toast.makeText(ChangePassword.this, "Password Changed", Toast.LENGTH_SHORT).show();
 
-                Intent intent=new Intent(ChangePassword.this, AccountFragment.class);
+                Intent intent=new Intent(ChangePassword.this, HomeActivity.class);
                 startActivity(intent);
-
             }
-
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
                 super.onFailure(statusCode, headers, throwable, errorResponse);
@@ -119,7 +114,6 @@ public class ChangePassword extends AppCompatActivity {
                 super.onFailure(statusCode, headers, throwable, responseString);
                 progress.hide();
                 Toast.makeText(ChangePassword.this, "Error Occurred", Toast.LENGTH_SHORT).show();
-
             }
         });
     }

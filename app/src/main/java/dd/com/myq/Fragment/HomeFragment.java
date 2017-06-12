@@ -150,7 +150,6 @@ public class HomeFragment extends Fragment{
 
         QUESTIONS_REQUEST_URL = QUESTIONS_REQUEST_URL + user_id;
 
-
         CallAPI call = new CallAPI();
         call.execute();
 
@@ -177,10 +176,6 @@ public class HomeFragment extends Fragment{
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-//                 makeToast(getContext(), "Left!");
-
-
-
                     String correctness;
 
                     if (al_correctAns.get(index).equals("NO")) {
@@ -194,9 +189,6 @@ public class HomeFragment extends Fragment{
 //                        Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
                     }
 
-//                flingContainer.getTopCardListener().selectLeft();
-
-
                     Log.d("getTop() : ", String.valueOf(flingContainer.getTop()));
 
 
@@ -206,20 +198,14 @@ public class HomeFragment extends Fragment{
 
                     Log.d(" correctA : ", al_correctAns.get(index));
 
-
                     AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
                     AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
-
 
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
 
-
-
-
-//              makeToast(getContext(), "Right!");
                     String correctness;
 
                     if (al_correctAns.get(index).equals("YES")) {
@@ -233,8 +219,6 @@ public class HomeFragment extends Fragment{
 //                        Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
                     }
 
-//                flingContainer.getTopCardListener().selectRight();
-
                     Log.d(" al_id : ", al_id.get(index));
 
                     Log.d(" Questions : ", al.get(index));
@@ -244,7 +228,6 @@ public class HomeFragment extends Fragment{
                     AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
                     AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
 
-
             }
 
             @Override
@@ -253,15 +236,12 @@ public class HomeFragment extends Fragment{
                 //al.add("XML ".concat(String.valueOf(i)));
                 // arrayAdapter.notifyDataSetChanged();
 
-                if(flag==10)
-                {
+               // Button button_left =
+
                     CallAPI call = new CallAPI();
                     call.execute();
                     flag=0;
-                }
-
             }
-
             @Override
             public void onScroll(float scrollProgressPercent) {
 
@@ -280,10 +260,8 @@ public class HomeFragment extends Fragment{
             }
         });
 
-
         Button button_left = (Button) view.findViewById(R.id.left);
         button_left.setBackgroundResource(R.drawable.false_btn);
-
 
         button_left.setOnClickListener(new View.OnClickListener()
         {
@@ -357,7 +335,6 @@ public class HomeFragment extends Fragment{
 
         return view;
     }
-
 
     public void AddQuestion(String userid,String questionid, String questiontext, String questionimage, String questioncorrectanswer, String questionpoints, String answercorrectness){
 
