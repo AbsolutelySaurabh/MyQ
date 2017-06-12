@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/absolutelysaurabh/Desktop/AndroidStudioProjects/myq-master (copy)/library/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a107ca124a189adda362417cf7df9ca6fc326003">
+        <dex dex="/home/absolutelysaurabh/Desktop/AndroidStudioProjects/myq-master (copy)/app/build/intermediates/pre-dexed/debug/classes_fcc50a4738643dfcda334433358ed988630b5cb5.jar" />
+    </item>
+
+</items>

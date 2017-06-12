@@ -1,0 +1,28 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dd.com.myq.Fragment.FriendFragment">
+
+    <TextView
+        android:layout_below="@+id/top_bar"
+        android:layout_above="@+id/buttons"
+        android:textSize="35sp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorGreyDark"
+        android:background="@drawable/card"
+        android:text="Coming Soon...!!"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
