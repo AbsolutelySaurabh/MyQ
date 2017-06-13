@@ -18,12 +18,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_library_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_library_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_library_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_library_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/HomeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Fragment/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Fragment/HomeFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/library.iml" afterPath="$PROJECT_DIR$/library/library.iml" />
     </list>
     <ignored path="myq-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,18 +57,18 @@
       <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Fragment/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
+            <state relative-caret-position="128">
+              <caret line="518" column="0" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
               <folding>
                 <element signature="e#1733#1741#0" expanded="true" />
                 <element signature="e#1856#1864#0" expanded="true" />
                 <element signature="e#1927#1935#0" expanded="true" />
-                <element signature="e#8753#8971#0" expanded="true" />
-                <element signature="e#8970#8971#0" expanded="true" />
-                <element signature="e#9148#9352#0" expanded="true" />
-                <element signature="e#9351#9352#0" expanded="true" />
-                <element signature="e#9533#9738#0" expanded="true" />
-                <element signature="e#9737#9738#0" expanded="true" />
+                <element signature="e#8751#8969#0" expanded="true" />
+                <element signature="e#8968#8969#0" expanded="true" />
+                <element signature="e#9146#9350#0" expanded="true" />
+                <element signature="e#9349#9350#0" expanded="true" />
+                <element signature="e#9531#9736#0" expanded="true" />
+                <element signature="e#9735#9736#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,12 +107,9 @@
       <file leaf-file-name="SessionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Util/SessionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding>
-                <element signature="e#3367#3368#0" expanded="true" />
-                <element signature="e#3422#3423#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="540">
+              <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,9 +127,12 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4140">
-              <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="828">
+              <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+              <folding>
+                <element signature="e#3690#3932#0" expanded="true" />
+                <element signature="e#3931#3932#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,7 +162,38 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="12834">
               <caret line="759" column="0" selection-start-line="759" selection-start-column="0" selection-end-line="759" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#0#33236#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#5244#5245#0" expanded="false" />
+                <element signature="e#5268#5269#0" expanded="false" />
+                <element signature="e#6114#6115#0" expanded="false" />
+                <element signature="e#6167#6168#0" expanded="false" />
+                <element signature="e#6239#6240#0" expanded="false" />
+                <element signature="e#6294#6295#0" expanded="false" />
+                <element signature="e#12521#12522#0" expanded="false" />
+                <element signature="e#12555#12556#0" expanded="false" />
+                <element signature="e#12595#12596#0" expanded="false" />
+                <element signature="e#12624#12625#0" expanded="false" />
+                <element signature="e#12680#12681#0" expanded="false" />
+                <element signature="e#12722#12723#0" expanded="false" />
+                <element signature="e#12783#12784#0" expanded="false" />
+                <element signature="e#12830#12831#0" expanded="false" />
+                <element signature="e#19693#19694#0" expanded="false" />
+                <element signature="e#19736#19737#0" expanded="false" />
+                <element signature="e#21461#21462#0" expanded="false" />
+                <element signature="e#21505#21506#0" expanded="false" />
+                <element signature="e#21563#21564#0" expanded="false" />
+                <element signature="e#21606#21607#0" expanded="false" />
+                <element signature="e#32975#32976#0" expanded="false" />
+                <element signature="e#33003#33004#0" expanded="false" />
+                <element signature="e#33037#33038#0" expanded="false" />
+                <element signature="e#33071#33072#0" expanded="false" />
+                <element signature="e#33110#33111#0" expanded="false" />
+                <element signature="e#33149#33150#0" expanded="false" />
+                <element signature="e#33195#33196#0" expanded="false" />
+                <element signature="e#33232#33233#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2935,8 +2963,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/buttons.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Util/SessionManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dd/com/myq/Fragment/HomeFragment.java" />
       </list>
     </option>
@@ -3875,7 +3903,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12834">
           <caret line="759" column="0" selection-start-line="759" selection-start-column="0" selection-end-line="759" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#33236#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5244#5245#0" expanded="false" />
+            <element signature="e#5268#5269#0" expanded="false" />
+            <element signature="e#6114#6115#0" expanded="false" />
+            <element signature="e#6167#6168#0" expanded="false" />
+            <element signature="e#6239#6240#0" expanded="false" />
+            <element signature="e#6294#6295#0" expanded="false" />
+            <element signature="e#12521#12522#0" expanded="false" />
+            <element signature="e#12555#12556#0" expanded="false" />
+            <element signature="e#12595#12596#0" expanded="false" />
+            <element signature="e#12624#12625#0" expanded="false" />
+            <element signature="e#12680#12681#0" expanded="false" />
+            <element signature="e#12722#12723#0" expanded="false" />
+            <element signature="e#12783#12784#0" expanded="false" />
+            <element signature="e#12830#12831#0" expanded="false" />
+            <element signature="e#19693#19694#0" expanded="false" />
+            <element signature="e#19736#19737#0" expanded="false" />
+            <element signature="e#21461#21462#0" expanded="false" />
+            <element signature="e#21505#21506#0" expanded="false" />
+            <element signature="e#21563#21564#0" expanded="false" />
+            <element signature="e#21606#21607#0" expanded="false" />
+            <element signature="e#32975#32976#0" expanded="false" />
+            <element signature="e#33003#33004#0" expanded="false" />
+            <element signature="e#33037#33038#0" expanded="false" />
+            <element signature="e#33071#33072#0" expanded="false" />
+            <element signature="e#33110#33111#0" expanded="false" />
+            <element signature="e#33149#33150#0" expanded="false" />
+            <element signature="e#33195#33196#0" expanded="false" />
+            <element signature="e#33232#33233#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3897,25 +3956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1476">
           <caret line="98" column="49" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Util/SessionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="e#3367#3368#0" expanded="true" />
-            <element signature="e#3422#3423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4140">
-          <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3943,20 +3983,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Util/SessionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+          <folding>
+            <element signature="e#3690#3932#0" expanded="true" />
+            <element signature="e#3931#3932#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dd/com/myq/Fragment/HomeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
+        <state relative-caret-position="128">
+          <caret line="518" column="0" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
           <folding>
             <element signature="e#1733#1741#0" expanded="true" />
             <element signature="e#1856#1864#0" expanded="true" />
             <element signature="e#1927#1935#0" expanded="true" />
-            <element signature="e#8753#8971#0" expanded="true" />
-            <element signature="e#8970#8971#0" expanded="true" />
-            <element signature="e#9148#9352#0" expanded="true" />
-            <element signature="e#9351#9352#0" expanded="true" />
-            <element signature="e#9533#9738#0" expanded="true" />
-            <element signature="e#9737#9738#0" expanded="true" />
+            <element signature="e#8751#8969#0" expanded="true" />
+            <element signature="e#8968#8969#0" expanded="true" />
+            <element signature="e#9146#9350#0" expanded="true" />
+            <element signature="e#9349#9350#0" expanded="true" />
+            <element signature="e#9531#9736#0" expanded="true" />
+            <element signature="e#9735#9736#0" expanded="true" />
           </folding>
         </state>
       </provider>

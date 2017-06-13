@@ -279,7 +279,7 @@ LoginActivity extends AppCompatActivity {
                             emai = jsonObject.getString("emailaddress");//////
                             _id = jsonObject.getString("_id");
                             aboutme = jsonObject.getString("aboutme");
-                            dob ="";
+                            dob =jsonObject.getString("dob");
                             gender = jsonObject.getString("gender");
                         }
 

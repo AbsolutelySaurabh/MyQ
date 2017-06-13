@@ -161,7 +161,6 @@ public class HomeFragment extends Fragment{
 
 
         arrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.item, R.id.helloText, al);
-
         flingContainer.setAdapter(arrayAdapter);
 
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
@@ -172,7 +171,6 @@ public class HomeFragment extends Fragment{
                 al.remove(0);
                 al_id.remove(0);
                 al_correctAns.remove(0);
-
                 arrayAdapter.notifyDataSetChanged();
             }
 
@@ -562,6 +560,15 @@ public class HomeFragment extends Fragment{
                 flag=10;
 
             }
+
+            Button button_left = (Button) view.findViewById(R.id.left);
+            button_left.setBackgroundResource(R.drawable.false_btn);
+            button_left.setEnabled(true);
+
+            Button button_right = (Button) view.findViewById(R.id.right);
+            button_right.setBackgroundResource(R.drawable.true_btn);
+            button_right.setEnabled(true);
+
             arrayAdapter.notifyDataSetChanged();
         }
 
