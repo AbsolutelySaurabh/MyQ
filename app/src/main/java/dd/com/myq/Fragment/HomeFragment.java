@@ -150,7 +150,6 @@ public class HomeFragment extends Fragment{
 
         QUESTIONS_REQUEST_URL = QUESTIONS_REQUEST_URL + user_id;
 
-
         CallAPI call = new CallAPI();
         call.execute();
 
@@ -179,8 +178,6 @@ public class HomeFragment extends Fragment{
                 //If you want to use it just cast it (String) dataObject
 //                 makeToast(getContext(), "Left!");
 
-
-
                     String correctness;
 
                     if (al_correctAns.get(index).equals("NO")) {
@@ -195,10 +192,7 @@ public class HomeFragment extends Fragment{
                     }
 
 //                flingContainer.getTopCardListener().selectLeft();
-
-
                     Log.d("getTop() : ", String.valueOf(flingContainer.getTop()));
-
 
                     Log.d(" al_id : ", al_id.get(index));
 
@@ -210,14 +204,10 @@ public class HomeFragment extends Fragment{
                     AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
                     AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
 
-
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-
-
-
 
 //              makeToast(getContext(), "Right!");
                     String correctness;
@@ -244,7 +234,6 @@ public class HomeFragment extends Fragment{
                     AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
                     AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
 
-
             }
 
             @Override
@@ -252,16 +241,13 @@ public class HomeFragment extends Fragment{
                 // Ask for more data here
                 //al.add("XML ".concat(String.valueOf(i)));
                 // arrayAdapter.notifyDataSetChanged();
-
                 if(flag==10)
                 {
                     CallAPI call = new CallAPI();
                     call.execute();
                     flag=0;
                 }
-
             }
-
             @Override
             public void onScroll(float scrollProgressPercent) {
 
@@ -271,7 +257,6 @@ public class HomeFragment extends Fragment{
 
         });
 
-
         // Optionally add an OnItemClickListener
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
@@ -280,17 +265,14 @@ public class HomeFragment extends Fragment{
             }
         });
 
-
         Button button_left = (Button) view.findViewById(R.id.left);
         button_left.setBackgroundResource(R.drawable.false_btn);
-
 
         button_left.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-
 
 //                another_flag = 1;
 //

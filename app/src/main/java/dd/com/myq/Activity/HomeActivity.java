@@ -58,14 +58,14 @@ public class HomeActivity extends AppCompatActivity implements AccountFragment.O
 
         UserName.setText(user.get(SessionManager.KEY_USERNAME));
 
-     //   imageLoader = ImageLoader.getInstance();
-
-     //   imageLoader.init(ImageLoaderConfiguration.createDefault(this));
-
+//        imageLoader = ImageLoader.getInstance();
+//
+//        imageLoader.init(ImageLoaderConfiguration.createDefault(this));
+//
 //        options = new DisplayImageOptions.Builder().cacheInMemory(true)
 //                .cacheOnDisk(true).build();
-
-     //   imageLoader.displayImage(Config.defaultImagePrefix+ user.get(SessionManager.KEY_PROFILE_PIC), ProfilePicture, options);
+//
+//        imageLoader.displayImage(Config.defaultImagePrefix+ user.get(SessionManager.KEY_PROFILE_PIC), ProfilePicture, options);
 
         Levels.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +86,6 @@ public class HomeActivity extends AppCompatActivity implements AccountFragment.O
             public void onClick(View v) {
                 TAG = "Point";
 
-
                 Fragment fragment = new PointFragment();
                 FragmentManager manager = getSupportFragmentManager();
 
@@ -94,7 +93,7 @@ public class HomeActivity extends AppCompatActivity implements AccountFragment.O
                 transaction.setCustomAnimations(android.R.anim.slide_in_left,
                         android.R.anim.slide_out_right);
                 transaction.replace(R.id.main_container, fragment, TAG);
-                transaction.addToBackStack(null);
+                transaction.addToBackStack(TAG);
                 transaction.commit();
             }
         });
@@ -111,13 +110,12 @@ public class HomeActivity extends AppCompatActivity implements AccountFragment.O
 
                 Fragment fragment = new AccountFragment();
                 FragmentManager manager = getSupportFragmentManager();
-
 //
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.setCustomAnimations(android.R.anim.slide_in_left,
                         android.R.anim.slide_out_right);
                 transaction.replace(R.id.main_container, fragment, TAG);
-                transaction.addToBackStack(null);
+                transaction.addToBackStack(TAG);
                 transaction.commit();
             }
         });
@@ -136,12 +134,11 @@ public class HomeActivity extends AppCompatActivity implements AccountFragment.O
 
                 FragmentTransaction transaction = manager.beginTransaction();
 
-
                 transaction.setCustomAnimations(android.R.anim.slide_in_left,
                         android.R.anim.slide_out_right);
                 transaction.replace(R.id.main_container, fragment, TAG);
 
-                transaction.addToBackStack(null);
+                transaction.addToBackStack(TAG);
 
                 transaction.commit();
             }
@@ -165,7 +162,7 @@ public class HomeActivity extends AppCompatActivity implements AccountFragment.O
 
                 transaction.setCustomAnimations(android.R.anim.slide_in_left,
                         android.R.anim.slide_out_right);
-//                transaction.replace(R.id.main_container, fragment, TAG);
+                transaction.replace(R.id.main_container, fragment, TAG);
                 transaction.addToBackStack(TAG);
                 transaction.commit();
             }

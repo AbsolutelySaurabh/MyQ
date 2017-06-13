@@ -18,12 +18,10 @@
 
     <Button
         android:id="@+id/left"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
         android:gravity="center"
-        android:text="FALSE"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/false_btn"
         android:paddingTop="15dp"
-        android:layout_marginRight="10dp"
         android:paddingBottom="15dp"
         android:textSize="20sp"
         android:layout_width="wrap_content"
@@ -32,11 +30,10 @@
 
     <Button
         android:id="@+id/right"
-        android:paddingRight="24dp"
-        android:paddingLeft="24dp"
-        android:layout_marginLeft="10dp"
+
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/true_btn"
         android:gravity="center"
-        android:text="TRUE"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:textSize="20sp"

@@ -315,7 +315,6 @@ LoginActivity extends AppCompatActivity {
                 progress.hide();
                 Toast.makeText(LoginActivity.this, "Error Occurred", Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject responseString) {
                 super.onFailure(statusCode, headers, throwable, responseString);
