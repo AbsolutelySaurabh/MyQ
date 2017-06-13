@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment{
 
     private static int another_flag=0;
 
-    int mBackStackSize = 0;
+    int j = 0;
 
     ArrayAdapter<String> arrayAdapter;
 
@@ -88,7 +88,7 @@ public class HomeFragment extends Fragment{
     private String mParam1;
     private String mParam2;
 
-    String user_id;
+
     SessionManager currentSession;
 
     private static final int QUESTION_LOADER_ID = 1;
@@ -97,7 +97,7 @@ public class HomeFragment extends Fragment{
 
     private static final String LOG_TAG = HomeFragment.class.getName();
 
-    private static String QUESTIONS_REQUEST_URL = "http://myish.com:10010/api/questions/";
+    private String QUESTIONS_REQUEST_URL = "http://myish.com:10010/api/questions/";
 
     private TextView mEmptyStateTextView;
 
@@ -142,18 +142,23 @@ public class HomeFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
 
         HashMap<String, String> user_details = currentSession.getUserDetails();
 
-        user_id = user_details.get(SessionManager.KEY_UID);
+        final String user_id = user_details.get(SessionManager.KEY_UID);
 
         QUESTIONS_REQUEST_URL = QUESTIONS_REQUEST_URL + user_id;
+
+        Log.d("i..........", String.valueOf(j));
+        j++;
 
         CallAPI call = new CallAPI();
         call.execute();
 
-        flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
 
         arrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.item, R.id.helloText, al);
 
@@ -173,66 +178,64 @@ public class HomeFragment extends Fragment{
 
             @Override
             public void onLeftCardExit(Object dataObject) {
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
-//                 makeToast(getContext(), "Left!");
 
-                    String correctness;
+                String correctness;
 
-                    if (al_correctAns.get(index).equals("NO")) {
+                if (al_correctAns.get(index).equals("NO")) {
 
-                        correctness = "Correct";
+                    correctness = "Correct";
 //                        Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
 
-                    } else {
+                } else {
 
-                        correctness = "incorrect";
+                    correctness = "incorrect";
 //                        Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
-                    }
+                }
 
 //                flingContainer.getTopCardListener().selectLeft();
-                    Log.d("getTop() : ", String.valueOf(flingContainer.getTop()));
+                Log.d("getTop() : ", String.valueOf(flingContainer.getTop()));
 
-                    Log.d(" al_id : ", al_id.get(index));
+                Log.d(" al_id : ", al_id.get(index));
 
-                    Log.d(" Questions : ", al.get(index));
+                Log.d(" Questions : ", al.get(index));
 
-                    Log.d(" correctA : ", al_correctAns.get(index));
+                Log.d(" correctA : ", al_correctAns.get(index));
 
+                AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
+                AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
 
-                    AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
-                    AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
+                Log.d("al in LeftCard: ", String.valueOf(al.size()));
 
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
 
-//              makeToast(getContext(), "Right!");
-                    String correctness;
+                String correctness;
 
-                    if (al_correctAns.get(index).equals("YES")) {
+                if (al_correctAns.get(index).equals("YES")) {
 
-                        correctness = "Correct";
+                    correctness = "Correct";
 //                        Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
 
-                    } else {
+                } else {
 
-                        correctness = "incorrect";
-//                        Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
-                    }
+                    correctness = "incorrect";
+//                       Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
+                }
 
 //                flingContainer.getTopCardListener().selectRight();
 
-                    Log.d(" al_id : ", al_id.get(index));
+                Log.d(" al_id : ", al_id.get(index));
 
-                    Log.d(" Questions : ", al.get(index));
+                Log.d(" Questions : ", al.get(index));
 
-                    Log.d(" correctA : ", al_correctAns.get(index));
+                Log.d(" correctA : ", al_correctAns.get(index));
 
-                    AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
-                    AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
+                AddQuestion(user_id, al_id.get(index), al.get(index), "", al_correctAns.get(index), "2", correctness);
+                AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
+
+                Log.d("al in Right Card : ", String.valueOf(al.size()));
 
             }
 
@@ -241,12 +244,26 @@ public class HomeFragment extends Fragment{
                 // Ask for more data here
                 //al.add("XML ".concat(String.valueOf(i)));
                 // arrayAdapter.notifyDataSetChanged();
+
+                Log.d("al EMpty Adapter 1 : ", String.valueOf(al.size()));
+
+                Button button_left = (Button) view.findViewById(R.id.left);
+                button_left.setBackgroundResource(R.drawable.false_btn);
+                button_left.setEnabled(false);
+
+                Button button_right = (Button) view.findViewById(R.id.right);
+                button_right.setBackgroundResource(R.drawable.true_btn);
+                button_right.setEnabled(false);
+
                 if(flag==10)
                 {
                     CallAPI call = new CallAPI();
                     call.execute();
                     flag=0;
                 }
+
+                Log.d("al EMpty Adapter 2 : ", String.valueOf(al.size()));
+
             }
             @Override
             public void onScroll(float scrollProgressPercent) {
@@ -274,28 +291,7 @@ public class HomeFragment extends Fragment{
             public void onClick(View v)
             {
 
-//                another_flag = 1;
-//
-//                String correctness;
-//
-//                if(al_correctAns.get(index).equals("NO")){
-//
-//                    correctness = "Correct";
-////                    Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
-//
-//                }else{
-//
-//                    correctness = "incorrect";
-////                    Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
-//                }
-
                 flingContainer.getTopCardListener().selectLeft();
-
-
-//                AddQuestion( user_id,al_id.get(index),al.get(index), "",al_correctAns.get(index),  "2" ,  correctness );
-//                AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
-
-                //index++;
 
             }
         });
@@ -310,27 +306,7 @@ public class HomeFragment extends Fragment{
             public void onClick(View v)
             {
 
-//                another_flag = 1;
-//
-//                String correctness;
-//
-//                if(al_correctAns.get(index).equals("YES")){
-//
-//                    correctness = "Correct";
-////                    Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
-//
-//                }else{
-//
-//                    correctness = "incorrect";
-////                    Toast.makeText(getActivity(), correctness, Toast.LENGTH_SHORT).show();
-//                }
-
                 flingContainer.getTopCardListener().selectRight();
-
-//                AddQuestion( user_id,al_id.get(index),al.get(index), "",al_correctAns.get(index),  "2" , correctness  );
-//                AddUserToQuestion(user_id, al_id.get(index), al_correctAns.get(index));
-
-                //index++;
 
             }
         });
@@ -384,7 +360,6 @@ public class HomeFragment extends Fragment{
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
-
             }
 
             @Override
@@ -409,6 +384,8 @@ public class HomeFragment extends Fragment{
         protected List<Question> doInBackground(URL... params) {
 
             URL url = createUrl(QUESTIONS_REQUEST_URL);
+
+            Log.e("Get Ques Req URL: ", QUESTIONS_REQUEST_URL);
 
             String jsonResponse = null;
             try {
@@ -522,7 +499,6 @@ public class HomeFragment extends Fragment{
 
                 JSONArray questionsArray = new JSONArray(questionsJSON);
 
-                //for each question create a json object
                 for(int i=0;i<questionsArray.length();i++){
 
                     JSONObject currentNews = questionsArray.getJSONObject(i);
@@ -552,7 +528,7 @@ public class HomeFragment extends Fragment{
         @Override
         protected void onPostExecute(List<Question> questions) {
 
-           Question question;
+            Question question;
             String text;
             String id;
             String correctAns;
@@ -569,9 +545,6 @@ public class HomeFragment extends Fragment{
 
                     correctAns = question.getCorrectAnswere();
 
-
-                    //String final_text = text+"!@#"+id;
-
                     al_id.add(id);
 
                     al.add(text);
@@ -579,9 +552,6 @@ public class HomeFragment extends Fragment{
                     al_correctAns.add(correctAns);
 
                     Log.d("Add To List", "al_id: "+id+"  al: "+ text+ "  al_correctAns "+correctAns);
-
-                   // al.add(final_text);
-
 
                 }
 
@@ -593,12 +563,9 @@ public class HomeFragment extends Fragment{
 
             }
             arrayAdapter.notifyDataSetChanged();
-
         }
 
-
     }
-
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

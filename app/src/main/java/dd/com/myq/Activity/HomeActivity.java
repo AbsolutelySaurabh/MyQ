@@ -27,8 +27,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class HomeActivity extends AppCompatActivity implements AccountFragment.OnFragmentInteractionListener, FriendFragment.OnFragmentInteractionListener, PointFragment.OnFragmentInteractionListener, HomeFragment.OnFragmentInteractionListener {
 
     public static String TAG = "Home";
-
-
     private RelativeLayout Home, Point, Account, Friends, Levels, Categories;
     private SessionManager sessionManager;
     private TextView UserName;
