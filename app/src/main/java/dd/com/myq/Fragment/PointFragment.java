@@ -174,7 +174,7 @@ public class PointFragment extends Fragment implements SwipeRefreshLayout.OnRefr
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
-                Log.e("Response Shushant GET: ", response.toString());
+                Log.d("Response Shushant GET: ", response.toString());
 
                 try {
 
