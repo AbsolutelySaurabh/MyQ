@@ -298,7 +298,19 @@ public class HomeFragment extends Fragment{
 
                     Log.d("al in LeftCard: ", String.valueOf(al.size()));
 
-                }
+                }else
+
+                    if(report_flag == 0){
+
+                        al.remove(0);
+                        al_id.remove(0);
+                        al_correctAns.remove(0);
+
+//                        arrayAdapter.notifyDataSetChanged();
+
+                        report_flag = 1;
+
+                    }
             }
 
             @Override
