@@ -1,3 +1,3 @@
 # MyQ
 
-Awesome Quiz app for techies.
+Awesome Quiz app for tech geeks.
